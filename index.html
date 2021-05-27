@@ -1,0 +1,31 @@
+
+<html>
+  <head>
+    <title>Form Validation</title>
+     <script>
+       function validate()
+       {
+         var uname=document.getElementById("uname");
+         var pword=document.getElementById("pass");
+
+         if(uname.value.trim()=="" || pword.value.trim()=="")
+         {
+           alert("Please fill out both fields")
+           return false;
+         }
+         else
+         {
+           return true;
+         }
+       }
+     </script>
+  </head>
+
+  <body>
+   <form onsubmit="return validate()" action="submit.html">
+    <input id="uname" placeholder="Username" type="text"/><br><br>
+    <input id="pass" placeholder="Password" type="password"/><br><br>
+    <button type="submit">Submit</button>
+   </form>
+  </body>
+</html>
